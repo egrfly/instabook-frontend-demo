@@ -7,9 +7,7 @@ function Users() {
   const [users, setUsers] = useState<User[] | null>(null);
 
   useEffect(function() {
-    setTimeout(function() {
-      getUsers().then(data => setUsers(data))
-    }, 300);
+    getUsers().then(data => setUsers(data));
   }, []);
 
   return (

@@ -7,9 +7,7 @@ function Books() {
   const [books, setBooks] = useState<Book[] | null>(null);
 
   useEffect(function() {
-    setTimeout(function() {
-      getBooks().then(data => setBooks(data))
-    }, 300);
+    getBooks().then(data => setBooks(data));
   }, []);
 
   return (
