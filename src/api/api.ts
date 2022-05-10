@@ -1,11 +1,31 @@
-export async function getBooks() {
-  // Like `response = requests.get(...)` in Python
-  const response = await fetch('http://127.0.0.1:5000/books');
-  // Like `return response.json()` in Python
-  return await response.json();
+export function getBooks() {
+  return [
+    {
+      id: 1,
+      title: 'Test Book',
+      author: 'Test Author',
+      rating: '4.0',
+    },
+    {
+      id: 2,
+      title: 'Another Test Book',
+      author: 'Another Test Author',
+      rating: '4.5',
+    },
+  ]
 }
 
-export async function getUsers() {
-  const response = await fetch('http://127.0.0.1:5000/users');
-  return await response.json();
+export function getUsers() {
+  return [
+    {
+      id: 1,
+      username: 'testuser',
+      display_name: 'Test User',
+    },
+    {
+      id: 2,
+      username: 'anothertestuser',
+      display_name: 'Another Test User',
+    },
+  ]
 }

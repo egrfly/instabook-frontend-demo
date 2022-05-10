@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from 'react';
 import { getUsers } from '../api/api';
 import UserCard from '../components/UserCard';
-import User from '../models/User';
 
 function Users() {
-  const [users, setUsers] = useState<User[] | null>(null);
-
-  useEffect(function() {
-    getUsers().then(data => setUsers(data));
-  }, []);
+  const users = getUsers();
 
   return (
     <main className="container pt-6 py-4">
